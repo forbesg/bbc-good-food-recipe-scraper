@@ -1,0 +1,9 @@
+<div class="form-container">
+	<form role="form" ng-model="recipe">
+		<div>
+			<label>Recipe URL</label>
+			<input type="url" placeholder="Enter Recipe URL" ng-model="recipe.url"  />
+		</div>
+		<button ng-click="getRecipe()" class="button">Get Recipe</button>
+	</form>
+</div>

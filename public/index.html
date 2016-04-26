@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>BBC Good Food Recipe Parser</title>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.0/foundation.min.css">
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular.min.js"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular-route.min.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+	<script type="text/javascript" src="js/controllers/home-controller.js"></script>
+	<script type="text/javascript" src="js/directives/recipe-form.js"></script>
+</head>
+<body ng-app="app">
+	<div id="main-container">
+		<h1>BBC Good Food recipe Parser</h1>
+		<h3>Enter the recipe url and we'll clear away the shit for you!!</h3>
+		<div ng-view>
+			
+		</div>
+	</div>
+	<div id="footer">
+		<footer>
+			<p>&copy; 2016 FNBG</p>
+		</footer>
+	</div>
+</body>
+</html>

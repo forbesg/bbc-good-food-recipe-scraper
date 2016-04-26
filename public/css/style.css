@@ -1,0 +1,18 @@
+body {
+  border-top: 10px solid #384D76;
+  padding: 40px 0;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Roboto', sans-serif;
+	font-weight: lighter;
+}
+#main-container {
+	width: 900px;
+	margin: 0 auto;
+}
+#footer {
+	position:fixed;
+	bottom:0;
+	width:100%;
+	text-align: center;
+}

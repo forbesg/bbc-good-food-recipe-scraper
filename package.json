@@ -1,0 +1,28 @@
+{
+  "name": "scraper",
+  "version": "0.0.1",
+  "description": "BBC Good Food Recipe Scraper",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Pull",
+    "recipe",
+    "ingredients",
+    "and",
+    "methods",
+    "from",
+    "BBC",
+    "Good",
+    "Food"
+  ],
+  "author": "Forbes Gray <fnbg75@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "cheerio": "^0.20.0",
+    "express": "^4.13.4",
+    "request": "^2.69.0"
+  }
+}
