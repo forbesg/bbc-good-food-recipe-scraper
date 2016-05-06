@@ -2,7 +2,7 @@
 	<form role="form" ng-model="recipe">
 		<div>
 			<label>Recipe URL</label>
-			<input type="url" placeholder="Enter Recipe URL" ng-model="recipe.url"  />
+			<input type="url" placeholder="Enter Recipe URL" ng-model="recipe.url" required />
 		</div>
 		<button ng-click="getRecipe()" class="button">Get Recipe</button>
 	</form>

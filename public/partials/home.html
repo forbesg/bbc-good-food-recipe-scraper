@@ -1,6 +1,14 @@
 <div class="large-6">
 	<recipe-form></recipe-form>
 </div>
+<div class="callout alert" data-closable="slide-out-right" ng-show="error">
+	<p>
+		{{ error }}
+	</p>
+	<p class="close" ng-click="closeError()">
+		&times;
+	</p>
+</div>
 <div ng-show="json">
 	<h4>{{ json.title }}</h4>
 	<p>{{ json.serves }} - {{ json.time.prep }} - {{ json.time.cook }}</p>

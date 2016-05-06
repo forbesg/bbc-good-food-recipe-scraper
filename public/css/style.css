@@ -11,6 +11,15 @@ h1, h2, h3, h4, h5, h6 {
 	margin: 0 auto;
   padding-bottom: 60px;
 }
+
+p.close {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
 #footer {
 	position:fixed;
   background-color: #384D76;

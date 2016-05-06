@@ -27,17 +27,18 @@ router.get('/', function (req, res) {
 			var $ = cheerio.load(html);
 			recipe.title = $('h1.recipe-header__title').text();
 			if (!recipe.title || recipe.title.length < 1) {
-				res.sendStatus(404, 'Page not found');
+				// res.sendStatus(404, 'Page not found');
+				return res.send({ error: "Not a valid BBC Good Food URL" });
 			} else {
 				$('.ingredients-list__item').each(function (index, item){
 					// Trim string up to line break where ingredient anchor description starts
-					var lineBreak = $(this).text().indexOf('\n'); 
+					var lineBreak = $(this).text().indexOf('\n');
 					if (lineBreak > 0) {
 						recipe.ingredients.push($(this).text().substring(0, lineBreak));
 					} else {
 						recipe.ingredients.push($(this).text());
 					}
-					
+
 				});
 				$('.method__item p').each(function (index, item) {
 					recipe.method.push($(this).text());
