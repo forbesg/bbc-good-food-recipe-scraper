@@ -3,6 +3,12 @@ var request = require('request');
 var cheerio = require('cheerio');
 var router = express();
 
+router.all('/', function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "X-Requested-With");
+  next();
+ });
+
 router.get('/', function (req, res) {
 	var url = req.query.url,
 			recipe = {
@@ -22,15 +28,16 @@ router.get('/', function (req, res) {
 				},
 				self_url: url
 			};
+
 	request(url, function (err, response, html) {
 		if (!err) {
 			var $ = cheerio.load(html);
-			recipe.title = $('h1.recipe-header__title').text();
+			recipe.title = $('h1.masthead__title.heading-1').text();
 			if (!recipe.title || recipe.title.length < 1) {
 				// res.sendStatus(404, 'Page not found');
 				return res.send({ error: "Not a valid BBC Good Food URL" });
 			} else {
-				$('.ingredients-list__item').each(function (index, item){
+				$('.recipe-template__ingredients ul li.list-item').each(function (index, item){
 					// Trim string up to line break where ingredient anchor description starts
 					var lineBreak = $(this).text().indexOf('\n');
 					if (lineBreak > 0) {
@@ -40,15 +47,15 @@ router.get('/', function (req, res) {
 					}
 
 				});
-				$('.method__item p').each(function (index, item) {
+				$('.recipe-template__method-steps ul .list-item p').each(function (index, item) {
 					recipe.method.push($(this).text());
 				});
 				recipe.time = {
-					preparation: $('.recipe-details__cooking-time-prep').text(),
-					cooking: $('.recipe-details__cooking-time-cook').text()
+					prep: $('.cook-and-prep-time .list').find('time').first().text(),
+					cook: $('.cook-and-prep-time .list').find('time').last().text()
 				}
-				recipe.serves = $('.recipe-details__item--servings').text();
-				recipe.image = $('.img-container img').attr('src');
+				recipe.serves = $('.masthead__servings').children().last().text();
+				recipe.image = $('.masthead__image img').attr('src');
 
 				res.send(recipe);
 			}

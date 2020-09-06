@@ -11,6 +11,13 @@ h1, h2, h3, h4, h5, h6 {
 	margin: 0 auto;
   padding-bottom: 60px;
 }
+.recipe-info {
+  margin-bottom: 1.6rem;
+}
+.recipe-info p {
+  font-size: .8rem;
+  margin: 0;
+}
 
 p.close {
   position: absolute;
@@ -18,6 +25,10 @@ p.close {
   right: 10px;
   font-size: 20px;
   cursor: pointer;
+}
+
+.method-list li {
+  margin-bottom: 1rem;
 }
 
 #footer {

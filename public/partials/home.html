@@ -11,7 +11,11 @@
 </div>
 <div ng-show="json">
 	<h4>{{ json.title }}</h4>
-	<p>{{ json.serves }} - {{ json.time.prep }} - {{ json.time.cook }}</p>
+  <div class="recipe-info">
+    <p>Servings: <b>{{ json.serves }}</b></p>
+    <p>Preparation Time: <b>{{ json.time.prep }}</b></p>
+    <p>Cooking Time: <b>{{ json.time.cook }}</b></p>
+  </div>
 	<div class="row">
 		<div class="large-6 columns">
 			<div>
@@ -22,7 +26,7 @@
 			</div>
 			<div>
 				<h5>Method</h5>
-				<ul>
+				<ul class="method-list">
 					<li ng-repeat="item in json.method track by $index">{{ item }}</li>
 				</ul>
 			</div>
