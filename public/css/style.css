@@ -1,21 +1,27 @@
 body {
-  border-top: 10px solid #384D76;
+  border-top: 10px solid #384d76;
   padding: 40px 0;
 }
-h1, h2, h3, h4, h5, h6 {
-	font-family: 'Roboto', sans-serif;
-	font-weight: lighter;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Roboto", sans-serif;
+  font-weight: lighter;
 }
 #main-container {
-	width: 900px;
-	margin: 0 auto;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
   padding-bottom: 60px;
 }
 .recipe-info {
   margin-bottom: 1.6rem;
 }
 .recipe-info p {
-  font-size: .8rem;
+  font-size: 0.8rem;
   margin: 0;
 }
 
@@ -32,12 +38,12 @@ p.close {
 }
 
 #footer {
-	position:fixed;
-  background-color: #384D76;
-	bottom:0;
-  height:40px;
-	width:100%;
-	text-align: center;
+  position: fixed;
+  background-color: #384d76;
+  bottom: 0;
+  height: 40px;
+  width: 100%;
+  text-align: center;
 }
 
 #footer p {
