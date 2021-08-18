@@ -10,6 +10,12 @@ h5,
 h6 {
   font-family: "Roboto", sans-serif;
   font-weight: lighter;
+  line-height: 1em;
+  margin-bottom: 0.75em;
+}
+h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
 }
 #main-container {
   max-width: 900px;

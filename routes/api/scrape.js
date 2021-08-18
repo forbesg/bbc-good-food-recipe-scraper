@@ -38,7 +38,6 @@ router.get("/", function (req, res) {
           console.log("Good Food");
           recipe.title = $("h1.post-header__title.heading-1").text();
           if (!recipe.title || recipe.title.length < 1) {
-            // res.sendStatus(404, 'Page not found');
             return res.send({ error: "Not a valid BBC Good Food URL" });
           } else {
             $(".recipe__ingredients ul li.list-item").each(function (
@@ -110,9 +109,6 @@ router.get("/", function (req, res) {
       } catch (err) {
         res.send({ error: "Invalid URI" });
       }
-
-      // .find((el) => el);
-      // console.log(recipeJSON);
     } else {
       res.send({ error: "Invalid URI" });
     }
