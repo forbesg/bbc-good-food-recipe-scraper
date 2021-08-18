@@ -1,8 +1,8 @@
 # BBC Good Food Recipe Scraper
 
-#### Strip out the chaff from a BBC Good Food Recipe Page
+#### Strip out the chaff from a BBC Food / BBC Good Food Recipe Page
 
-A simple script that, given a BBC Good Food recipe URL, will return the 
+A simple script that, given a [BBC Food](https://www.bbc.co.uk/food) or [BBC Good Food](https://www.bbcgoodfood.com/) recipe URL, will return the
 list of required ingredients and cooking method.
 
 Requires Node JS to be installed locally.
