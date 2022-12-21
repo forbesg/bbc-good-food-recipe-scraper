@@ -59,8 +59,8 @@ router.get("/", function (req, res) {
               recipe.method.push($(this).text());
             });
             recipe.time = {
-              prep: $(".cook-and-prep-time .list").find("time").first().text(),
-              cook: $(".cook-and-prep-time .list").find("time").last().text(),
+              prep: $(".cook-and-prep-time .list time").first().text(),
+              cook: $(".cook-and-prep-time .list time").last().text(),
             };
             recipe.serves = $(".post-header__servings")
               .children()
